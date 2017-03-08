@@ -22,6 +22,17 @@ case "$1" in
     configure)
         # create users using sysusers.d
         systemd-sysusers
+
+        # create home & log directories
+        mkdir -p /var/lib/gitdns
+        mkdir -p /var/log/gitdns
+        if id -u _gitdns > /dev/null 2>&1
+        then
+            chown _gitdns:_gitdns /var/lib/gitdns
+            chown root:_gitdns /var/log/gitdns
+        fi
+        chmod 0750 /var/lib/gitdns
+        chmod 0750 /var/log/gitdns
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
