@@ -1,0 +1,20 @@
+Source: gitdns
+Section: misc
+Priority: optional
+Maintainer: Ville Korhonen <ville@xd.fi>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.8
+Homepage: https://github.com/ypcs/gitdns
+Vcs-Git: https://github.com/ypcs/gitdns.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/gitdns.git
+
+Package: gitdns
+Architecture: any
+Depends: ${shlibs:Depends},
+ ${misc:Depends},
+ bind9,
+ git,
+ systemd
+Description: Automated git-based DNS management
+ Manage your DNS configuration and zones in git-repository,
+ and this tool does everything else.
