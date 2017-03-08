@@ -1,0 +1,7 @@
+/var/log/gitdns/gitdns.log {
+    compress
+    create 0660 root _gitdns
+    missingok
+    monthly
+    rotate 365
+}

@@ -1,3 +1,4 @@
 gitdns.d /etc/
+logrotate.d /etc/
 system /lib/systemd/
 sysusers.d /usr/lib/
